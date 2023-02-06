@@ -1,13 +1,38 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-dark {
+  background-color: #18171c;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bg-dark-gray {
+  background-color: #201f24;
+}
+
+.input {
+  background-color: #201f24;
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 5px;
+}
+
+.bg_indicator {
+  background-color: #1b2224;
+}
+
+.bg_purple {
+  background-color: #8159f3;
+}
+
+.group_button_l {
+  @apply px-6 py-4 text-sm font-medium text-white rounded-l-lg border-r border-gray-400;
+}
+
+.group_button_r {
+  @apply px-6 py-4 text-sm font-medium text-white rounded-r-lg;
+}
+
+.group_button_single {
+  @apply px-6 py-4 text-sm font-medium text-white rounded-r-lg rounded-l-lg;
 }
