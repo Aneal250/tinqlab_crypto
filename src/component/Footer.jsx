@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Avater from "./imgs/Avatar.png";
 import Wrapper from "./Wrapper";
+import axios from "axios";
+import CrytoCoin from "./CrytoCoin";
 
 const Footer = () => {
+  const [coinData, setCoinData] = useState([]);
+
+  const FetchTopSixcoins = async () => {
+    const response = await axios(
+      "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=6&page=1&sparkline=false"
+    );
+    setCoinData(response.data);
+    console.log(response.data);
+  };
+
+  useEffect(() => {
+    FetchTopSixcoins();
+  }, []);
+
   return (
     <Wrapper>
       <div>
@@ -21,41 +37,8 @@ const Footer = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>
-                <div className="flex items-center">
-                  <div>
-                    <img src={Avater} className="mr-4" />
-                  </div>
-                  <div>
-                    <p className="">
-                      Bitcoin <span className="text-gray-400 text-sm">BTC</span>
-                    </p>
-                  </div>
-                </div>
-              </td>
-              <td className="table_items">
-                <p>$1,19223</p>
-              </td>
-              <td className="table_items">
-                <p>$47,19223</p>
-              </td>
-              <td className="table_items">
-                <p>$1000009,19223</p>
-              </td>
-              <td className="table_items">
-                <p>$1,19223</p>
-              </td>
-              <td className="table_items">
-                <p>$23,89879</p>
-              </td>
-              <td className="table_items">
-                <p>$23,89879</p>
-              </td>
-              <td className="table_items">
-                <p> + &nbsp;&nbsp;&nbsp;...</p>
-              </td>
-            </tr>
+            {coinData &&
+              coinData.map((coin) => <CrytoCoin key={coin.id} coin={coin} />)}
           </tbody>
         </table>
       </div>
