@@ -36,3 +36,7 @@
 .group_button_single {
   @apply px-6 py-4 text-sm font-medium text-white rounded-r-lg rounded-l-lg;
 }
+
+.table_items {
+  @apply w-36 text-right text-sm
+}
