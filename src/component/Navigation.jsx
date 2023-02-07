@@ -7,13 +7,13 @@ const Navigation = () => {
   return (
     <Wrapper>
       {/* input Section */}
-      <div className="w-5/6">
+      <div className="md:w-5/6  w-full my-2">
         <input placeholder="Search" type="text" className="input" />
       </div>
 
       {/* Icons section */}
-      <div className=" flex ml-10 items-center">
-        <div className="mx-4">
+      <div className=" flex  items-center ">
+        <div className="mx-4 my-2">
           <img src={Avatar} alt="image" />
         </div>
         <div className="mx-4">

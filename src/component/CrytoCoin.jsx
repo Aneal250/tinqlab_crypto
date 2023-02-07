@@ -1,5 +1,6 @@
 import React from "react";
-import Avater from "./imgs/Avatar.png";
+
+
 const CrytoCoin = ({ coin }) => {
   const ConvertedAmount = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -10,11 +11,11 @@ const CrytoCoin = ({ coin }) => {
       <td>
         <div className="flex items-center">
           <div>
-            <img src={coin.image} className="mr-4 w-8 h-8" />
+            <img src={coin.image} className="mr-4 md:w-8 md:h-8 w-4 h-4" />
           </div>
           <div>
-            <p className="">
-              {coin.name}{" "}
+            <p className="md:text-sm text-xs">
+              {coin.name}
               <span className="text-gray-400 text-sm">{coin.symbol}</span>
             </p>
           </div>

@@ -21,9 +21,9 @@ const Footer = () => {
 
   return (
     <Wrapper>
-      <div>
+      <div className="overflow-x-scroll bg-dark">
         <p className="text-white text-2xl py-2"> Your Assest</p>
-        <table className="table-auto text-white">
+        <table className="table-fixed text-white">
           <thead>
             <tr className="border-b border-gray-400">
               <th className="w-64 text-left text-sm font-normal text-gray-400">
