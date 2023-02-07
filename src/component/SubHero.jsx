@@ -11,13 +11,13 @@ const SubHero = () => {
           <div>
             <p className="text-6xl font-bold text-white">$3,742.15</p>
           </div>
-          <div className="flex ">
-            <p className="mx-4 bg_indicator px-1 py-1 rounded-sm text-green-500">
-              <span>
-                <img src={Polygon} />
-              </span>
-              0.55%
-            </p>
+          <div className="flex mx-4 bg_indicator px-1 py-1 rounded-sm text-green-500 items-center gap-1 ">
+            <div>
+              <img src={Polygon} />
+            </div>
+            <div>
+              <p className="">0.55%</p>
+            </div>
           </div>
         </div>
       </div>

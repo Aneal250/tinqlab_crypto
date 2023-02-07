@@ -26,6 +26,15 @@
   background-color: #8159f3;
 }
 
+td {
+  padding: 5px 1px;
+}
+
+th {
+  padding: 18px 1px;
+  margin: 4px 0px;
+}
+
 .group_button_l {
   @apply px-6 py-4 text-sm font-medium text-white rounded-l-lg border-r border-gray-400;
 }
@@ -38,6 +47,10 @@
   @apply px-6 py-4 text-sm font-medium text-white rounded-r-lg rounded-l-lg;
 }
 
+.table_items_header {
+  @apply w-36 text-right text-sm font-normal text-gray-400;
+}
+
 .table_items {
-  @apply w-36 text-right text-sm
+  @apply w-36 text-right text-sm;
 }

@@ -23,17 +23,19 @@ const Footer = () => {
     <Wrapper>
       <div>
         <p className="text-white text-2xl py-2"> Your Assest</p>
-        <table className="table-fixed text-white">
+        <table className="table-auto text-white">
           <thead>
-            <tr className="py-2">
-              <td className="w-72 text-left text-sm">Coin</td>
-              <td className="table_items">Holdings</td>
-              <td className="table_items">Price</td>
-              <td className="table_items">Market Cap</td>
-              <td className="table_items">Vloume (24h)</td>
-              <td className="table_items">Last (24h)</td>
-              <td className="table_items">Profit/ Loss</td>
-              <td className="table_items">Action</td>
+            <tr className="border-b border-gray-400">
+              <th className="w-64 text-left text-sm font-normal text-gray-400">
+                Coin
+              </th>
+              <th className="table_items_header">Holdings</th>
+              <th className="table_items_header">Price</th>
+              <th className="table_items_header">Market Cap</th>
+              <th className="table_items_header">Vloume (24h)</th>
+              <th className="table_items_header">Last (24h)</th>
+              <th className="table_items_header">Culculating Supply</th>
+              <th className="table_items_header">Action</th>
             </tr>
           </thead>
           <tbody>

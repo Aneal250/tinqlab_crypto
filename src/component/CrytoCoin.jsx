@@ -1,6 +1,10 @@
 import React from "react";
 import Avater from "./imgs/Avatar.png";
 const CrytoCoin = ({ coin }) => {
+  const ConvertedAmount = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
   return (
     <tr>
       <td>
@@ -17,22 +21,22 @@ const CrytoCoin = ({ coin }) => {
         </div>
       </td>
       <td className="table_items">
-        <p>$1,19223</p>
+        <p>${ConvertedAmount(coin.atl_change_percentage)}</p>
       </td>
       <td className="table_items">
-        <p>${coin.current_price}</p>
+        <p>${ConvertedAmount(coin.current_price)}</p>
       </td>
       <td className="table_items">
-        <p>${coin.market_cap}</p>
+        <p>${ConvertedAmount(coin.market_cap)}</p>
       </td>
       <td className="table_items">
-        <p>{coin.total_volume}</p>
+        <p>${ConvertedAmount(coin.total_volume)}</p>
       </td>
       <td className="table_items">
         <p>${coin.price_change_percentage_24h}</p>
       </td>
-      <td className="table_items">
-        <p>$23,89879</p>
+      <td className="w-40 text-right text-sm ">
+        <p>{ConvertedAmount(coin.circulating_supply)}</p>
       </td>
       <td className="table_items">
         <p> + &nbsp;&nbsp;&nbsp;...</p>
