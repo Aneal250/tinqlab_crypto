@@ -48,21 +48,21 @@ const SubHero = () => {
           <div className="inline-flex rounded-md shadow-sm" role="group">
             <button
               type="button"
-              className="md:px-6 md:py-4 px-3 py-2 md:text-sm text-xs font-medium text-white rounded-l-lg border-r border-gray-400 bg-dark-gray shadow-slate-700"
+              className="md:px-6 md:py-4 px-3 py-2 md:text-sm text-xs font-medium text-white rounded-l-lg border-r border-gray-400 bg-dark-gray "
             >
               Send
             </button>
 
             <button
               type="button"
-              className="md:px-6 md:py-4 px-3 py-2 md:text-sm text-xs font-medium text-white rounded-r-lg  border-gray-400 bg-dark-gray shadow-slate-700"
+              className="md:px-6 md:py-4 px-3 py-2 md:text-sm text-xs font-medium text-white rounded-r-lg  border-gray-400 bg-dark-gray "
             >
-              Recive
+              Receive
             </button>
           </div>
         </div>
         <div className="mx-4">
-          <button className="md:px-6 md:py-4 px-3 py-2 md:text-sm text-xs font-medium text-white rounded-r-lg rounded-l-lg bg-dark-gray shadow-md shadow-slate-700">
+          <button className="md:px-6 md:py-4 px-3 py-2 md:text-sm text-xs font-medium text-white rounded-r-lg rounded-l-lg bg-dark-gray shadow-md ">
             ...
           </button>
         </div>
