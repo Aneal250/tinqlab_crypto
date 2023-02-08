@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Wrapper from "./Wrapper";
 import axios from "axios";
 import CrytoCoin from "./CrytoCoin";
+import Loading from "./Loading";
 
 const Footer = () => {
   const [coinData, setCoinData] = useState([]);
@@ -37,9 +38,11 @@ const Footer = () => {
               <th className="table_items_header">Action</th>
             </tr>
           </thead>
+          {!coinData.length && <Loading />}
           <tbody>
-            {coinData &&
-              coinData.map((coin) => <CrytoCoin key={coin.id} coin={coin} />)}
+            {coinData.map((coin) => (
+              <CrytoCoin key={coin.id} coin={coin} />
+            ))}
           </tbody>
         </table>
       </div>
