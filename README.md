@@ -7,9 +7,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Here is the hosted URL for the Task [Cryto Page url](https://tinqlab-crypto.vercel.app)
 
-## Available Scripts for the Project
+### Available Scripts for the Project
 
-In the project directory, you can run:
+
 `git clone https://github.com/Aneal250/tinqlab_crypto.git`
 
 `npm install`
