@@ -23,7 +23,7 @@ const Footer = () => {
     <Wrapper>
       <div className="overflow-x-scroll bg-dark">
         <p className="text-white text-2xl py-2"> Your Assest</p>
-        <table className="table-fixed text-white">
+        <table className="table-auto text-white">
           <thead>
             <tr className="border-b border-gray-400">
               <th className="w-64 text-left text-sm font-normal text-gray-400">
@@ -32,7 +32,7 @@ const Footer = () => {
               <th className="table_items_header">Holdings</th>
               <th className="table_items_header">Price</th>
               <th className="table_items_header">Market Cap</th>
-              <th className="table_items_header">Vloume (24h)</th>
+              <th className="table_items_header">Volume (24h)</th>
               <th className="table_items_header">Last (24h)</th>
               <th className="table_items_header">Culculating Supply</th>
               <th className="table_items_header">Action</th>

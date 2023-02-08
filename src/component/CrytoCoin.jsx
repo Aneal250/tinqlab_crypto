@@ -1,9 +1,17 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import Polygon from "./imgs/Polygon.png";
+import ArrowDown from "./imgs/ArrowDown.png";
+import ArrowUp from "./imgs/ArrowUp.png";
 
 const CrytoCoin = ({ coin }) => {
   const ConvertedAmount = (x) => {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    let converted = x.toFixed(1);
+    return converted.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
+  const toFixedTwo = (x) => {
+    let converted = x.toFixed(2);
+    return Math.abs(converted);
   };
 
   return (
@@ -16,7 +24,7 @@ const CrytoCoin = ({ coin }) => {
           <div>
             <p className="md:text-sm text-xs">
               {coin.name}
-              <span className="text-gray-400 text-sm">{coin.symbol}</span>
+              <span className="text-gray-400 text-sm pl-2">{coin.symbol}</span>
             </p>
           </div>
         </div>
@@ -34,9 +42,22 @@ const CrytoCoin = ({ coin }) => {
         <p>${ConvertedAmount(coin.total_volume)}</p>
       </td>
       <td className="table_items">
-        <p>${coin.price_change_percentage_24h}</p>
+        <p
+          className={
+            Math.sign(coin.price_change_percentage_24h) == 1
+              ? " text-green-600"
+              : "text-red-500"
+          }
+        >
+          {Math.sign(coin.price_change_percentage_24h) == 1 ? (
+            <img src={ArrowUp} className="inline w-2 mr-1" />
+          ) : (
+            <img src={ArrowDown} className="inline w-3 mr-1" />
+          )}
+          {toFixedTwo(coin.price_change_percentage_24h)}&#37;
+        </p>
       </td>
-      <td className="w-40 text-right text-sm ">
+      <td className="table_items_supply ">
         <p>{ConvertedAmount(coin.circulating_supply)}</p>
       </td>
       <td className="table_items">

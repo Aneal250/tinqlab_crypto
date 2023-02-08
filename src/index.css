@@ -40,5 +40,9 @@ th {
 }
 
 .table_items {
-  @apply w-36 text-right md:text-sm text-xs;
+  @apply w-36 text-right md:text-sm text-xs flex-shrink-0;
+}
+
+.table_items_supply {
+  @apply w-40 text-right md:text-sm text-xs flex-shrink-0;
 }
