@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Avater from "./imgs/Avatar.png";
 import Wrapper from "./Wrapper";
 import axios from "axios";
 import CrytoCoin from "./CrytoCoin";

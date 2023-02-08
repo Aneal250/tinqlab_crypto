@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Polygon from "./imgs/Polygon.png";
 import ArrowDown from "./imgs/ArrowDown.png";
 import ArrowUp from "./imgs/ArrowUp.png";
 
